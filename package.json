@@ -4,7 +4,7 @@
   "description": "Simple starter for markup",
   "main": "index.html",
   "scripts": {
-    "start": "webpack-dev-server"
+    "start": "webpack-dev-server --hot"
   },
   "keywords": [
     "html",
@@ -14,8 +14,8 @@
   "license": "ISC",
   "devDependencies": {
     "css-loader": "^0.25.0",
-    "node-sass": "^3.10.1",
-    "sass-loader": "^4.0.2",
+    "less": "^2.7.1",
+    "less-loader": "^2.2.3",
     "style-loader": "^0.13.1"
   }
 }

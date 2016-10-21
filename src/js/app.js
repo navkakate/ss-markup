@@ -1,1 +1,1 @@
-require('../styles/main.scss');
+require('../styles/main.less');
