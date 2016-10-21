@@ -1,15 +1,25 @@
+var webpack = require('webpack');
+var HtmlWebpackPlugin = require('html-webpack-plugin');
+
 module.exports = {
-  entry: ["./src/js/app.js"],
-  module: {
-      loaders: [
-          {
-              test: /\.less$/,
-              loaders: ['style', 'css', 'less']
-          }
-      ]
-  },
-  output: {
-    filename: "bundle.js"
-  },
-  watch: true
+    entry: ["./src/app.js"],
+    module: {
+        loaders: [{
+            test: /\.less$/,
+            loaders: ['style', 'css', 'less']
+        }, {
+            test: /\.html$/,
+            loader: "raw-loader"
+        }]
+    },
+    plugins: [
+        new webpack.HotModuleReplacementPlugin(),
+        new HtmlWebpackPlugin({
+            template: './src/index.html'
+        })
+    ],
+    output: {
+        filename: "bundle.js"
+    },
+    watch: true
 }
